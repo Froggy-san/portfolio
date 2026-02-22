@@ -2,21 +2,15 @@ import AboutSection from "@/components/home/AboutSection";
 import MainPage from "@/components/home/MainPage";
 import Menu from "@/components/home/Menu";
 import ProgressBar from "@/components/home/ProgressBar";
-import ProjectCard from "@/components/home/ProjectCard";
+
 import Projects from "@/components/home/Projects";
 import HueDesktop from "@/components/HueDesktop";
 import MouseGlow from "@/components/MouseHue";
-import { Button } from "@/components/ui/button";
+
 import useIsDesktop from "@/hooks/useIsDisktop";
 
 import Lenis from "@studio-freight/lenis";
-import {
-  useSpring,
-  motion,
-  useScroll,
-  useTransform,
-  useMotionTemplate,
-} from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 const Home = () => {
@@ -110,68 +104,3 @@ const Home = () => {
 };
 
 export default Home;
-
-function ProjectsList() {
-  return (
-    <section className="  overflow-hidden shrink-0 relative">
-      <div className=" wrapper w-full max-w-none">
-        <div
-          className=" relative"
-          style={{ padding: "11.33333vh 360px 202px" }}
-        >
-          {/* ---------- */}
-          <div className="  h-full  w-full overflow-hidden">
-            <h2 className="  text-[5.3vh] text-off-white mb-3.5 ">Projects</h2>
-          </div>
-          {/* ---------- */}
-
-          <ul className=" flex gap-x-[30px]">
-            {/* <Project title="Auto-zone" link="" image="/public/z.png" />
-            <Project title="Auto-zone" link="" image="/public/z.png" />
-            <Project title="Auto-zone" link="" image="/public/z.png" /> */}
-            <ProjectCard title="Auto-zone" link="" image="/public/z.png" />
-          </ul>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Project({
-  title,
-  image,
-  link,
-}: {
-  title: string;
-  image: string;
-  link: string;
-}) {
-  return (
-    <li className="">
-      <a
-        href={link}
-        className="  font-medium" // Set a base height (e.g., 80% of screen)
-      >
-        <div
-          className="relative h-[480px] w-[345px] aspect-363/250  overflow-hidden border-2 border-primary group p-2.5  shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]"
-          /* By setting h-full and aspect-[1/1.41], the browser 
-             automatically calculates the correct width.
-          */
-        >
-          <img
-            src={image}
-            alt={title}
-            className="      object-cover object-top max-h-full w-full transition-all duration-700 ease-in-out grayscale group-hover:grayscale-0"
-            // style={{ maxInlineSize: "100%", blockSize: "auto" }}
-          />
-
-          <div className="absolute inset-0 pointer-events-none mix-blend-overlay" />
-        </div>
-
-        <p className=" font-light mt-2.5  text-xl text-white/90 uppercase tracking-tighter">
-          {title}
-        </p>
-      </a>
-    </li>
-  );
-}

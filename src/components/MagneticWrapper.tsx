@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
 export default function MagneticWrapper({
   children,

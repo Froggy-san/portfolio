@@ -1,6 +1,3 @@
-import React from "react";
-import { Button } from "../ui/button";
-
 const MainPage = () => {
   return (
     <section className=" h-screen relative w-screen  shrink-0  ">
@@ -13,7 +10,7 @@ const MainPage = () => {
       </Button> */}
 
       <span
-        className="   absolute  hidden lg:inline-block  rotate-[-90deg]  font bottom-[10%] left-[-26px]  text-off-white  text-lg"
+        className="   absolute  hidden lg:inline-block  -rotate-90  font bottom-[10%] -left-6.5  text-off-white  text-lg"
         // style={{ writingMode: "vertical-rl" }}
       >
         Mohammed Osama
@@ -23,7 +20,7 @@ const MainPage = () => {
       <svg
         viewBox="0 0 600 500"
         preserveAspectRatio="xMidYMid meet"
-        className="  max-w-[350px]  sm:max-w-[400px]  -rotate-90 lg:rotate-0 lg:max-w-[35vw]  absolute bottom-[26%]  right-[-30px]  sm:right-[10px]   lg:bottom-[15vh] lg:right-[14vw] font-bold overflow-visible mx-auto block"
+        className="  max-w-87.5  sm:max-w-100 -rotate-90 lg:rotate-0 lg:max-w-[35vw]  absolute bottom-[26%]  -right-7.5  sm:right-2.5   lg:bottom-[15vh] lg:right-[14vw] font-bold overflow-visible mx-auto block"
       >
         <defs>
           <linearGradient id="m-gradient" x1="0%" y1="0%" x2="100%" y2="100%">

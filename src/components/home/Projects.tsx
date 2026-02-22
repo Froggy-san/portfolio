@@ -8,7 +8,7 @@ const Projects = React.forwardRef<HTMLDivElement>((_, ref) => {
       ref={ref}
       className=" py-44 lg:py-0  overflow-hidden shrink-0 relative"
     >
-      <div className=" wrapper  w-[88%] max-w-[480px] mx-auto lg:w-full lg:max-w-none">
+      <div className=" wrapper  w-[88%] max-w-120 mx-auto lg:w-full lg:max-w-none">
         <div
           className=" relative  lg:p-[11.33333vh_360px_202px]"
           // style={{ padding: "11.33333vh 360px 202px" }}
@@ -19,7 +19,7 @@ const Projects = React.forwardRef<HTMLDivElement>((_, ref) => {
           </div>
           {/* ---------- */}
 
-          <ul className=" flex lg:flex-row flex-col gap-y-[54px] gap-x-[30px]">
+          <ul className=" flex lg:flex-row flex-col gap-y-13.5 gap-x-7.5">
             {/* <Project title="Auto-zone" link="" image="/public/z.png" />
             <Project title="Auto-zone" link="" image="/public/z.png" />
             <Project title="Auto-zone" link="" image="/public/z.png" /> */}

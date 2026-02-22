@@ -1,7 +1,7 @@
 import React from "react";
 import { AnimatePresence, motion } from "motion/react";
 import useIsDesktop from "@/hooks/useIsDisktop";
-import MagneticButton from "../MagneticButton";
+
 import MagneticWrapper from "../MagneticWrapper";
 
 export const ProFormSlideVariants = {
@@ -69,7 +69,7 @@ const Menu = ({
   };
 
   return (
-    <nav className=" fixed   right-[22px] lg:left-[42px] top-[62px] z-50 lg:right-auto">
+    <nav className=" fixed   right-5.5 lg:left-10.5 top-15.5 z-50 lg:right-auto">
       <div className="  flex  flex-col  lg:flex-row  items-end lg:items-start text-white ">
         <MagneticWrapper>
           <button
@@ -90,8 +90,8 @@ const Menu = ({
               exit={"exit"}
               className="  mt-4  h-full overflow-hidden lg:overflow-visible   lg:ml-6"
             >
-              <div className="   border lg:border-0   p-2 lg:p-0 rounded-[1.25rem] ">
-                <ul className=" bg-off-white  text-lg  lg:text-base text-primary/80  p-[25px_34px_25px_49px] lg:p-0 lg:bg-transparent lg:text-white  rounded-[1.25rem]  space-y-5">
+              <div className="   border lg:border-0   p-2 lg:p-0 rounded-4xl">
+                <ul className=" bg-off-white  text-lg  lg:text-base text-primary/80  p-[25px_34px_25px_49px] lg:p-0 lg:bg-transparent lg:text-white  rounded-4xl  space-y-5">
                   {LINKS.map((link, i) => (
                     <motion.li
                       key={i}

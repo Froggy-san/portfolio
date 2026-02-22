@@ -1,14 +1,6 @@
 import React from "react";
 import Button from "../Button";
-import {
-  MdAlternateEmail,
-  MdEmail,
-  MdOutlineMailOutline,
-} from "react-icons/md";
-import { SiMinutemailer } from "react-icons/si";
-import { CiVoicemail } from "react-icons/ci";
-import { AiTwotoneMail } from "react-icons/ai";
-import { TfiEmail } from "react-icons/tfi";
+import { MdOutlineMailOutline } from "react-icons/md";
 
 const AboutSection = React.forwardRef<HTMLDivElement>((_, ref) => {
   return (
@@ -37,10 +29,10 @@ const AboutSection = React.forwardRef<HTMLDivElement>((_, ref) => {
             </p>
 
             <div className="  flex  flex-col lg:flex-row items-center   gap-7">
-              <Button className=" w-full max-w-[170px]  h-fit py-2.25 ">
+              <Button className=" w-full max-w-42.5  h-fit py-2.25 ">
                 Resoume
               </Button>
-              <Button className=" w-full max-w-[170px]   h-fit py-2.25">
+              <Button className=" w-full max-w-42.5   h-fit py-2.25">
                 Github
               </Button>
             </div>
@@ -53,7 +45,7 @@ const AboutSection = React.forwardRef<HTMLDivElement>((_, ref) => {
                 viewBox="0 0 200 200"
                 width="200"
                 height="200"
-                className=" animate-spin  [animation-duration:_10s]"
+                className=" animate-spin  animation-duration-[10s]"
               >
                 <defs>
                   {/* Top Arc: Moving Right to Left (makes text face center) */}
