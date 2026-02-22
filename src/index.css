@@ -270,7 +270,7 @@
 
   .hue {
     position: fixed;
-    background-color: var(--primary / 60);
+    background-color: var(--primary);
     left: 0;
     top: 0;
     filter: blur(250px);
@@ -329,7 +329,7 @@
       border: 1px solid white;
       font-weight: 400;
       font-size: 16.5px;
-      letter-spacing: 0.05em;
+      letter-spacing: none;
       text-decoration: none;
       cursor: pointer;
       display: flex;

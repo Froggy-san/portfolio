@@ -20,7 +20,7 @@ const MainPage = () => {
       <svg
         viewBox="0 0 600 500"
         preserveAspectRatio="xMidYMid meet"
-        className="  max-w-87.5  sm:max-w-100 -rotate-90 lg:rotate-0 lg:max-w-[35vw]  absolute bottom-[26%]  -right-7.5  sm:right-2.5   lg:bottom-[15vh] lg:right-[14vw] font-bold overflow-visible mx-auto block"
+        className="  max-w-125 pl-14   -rotate-90 lg:rotate-0 lg:max-w-[35vw]  absolute bottom-[26%]  -right-21.25 pr-10 lg:pr-0 lg:pl-0 sm:-right-17.5   lg:bottom-[15vh] lg:right-[14vw] font-bold overflow-visible mx-auto block"
       >
         <defs>
           <linearGradient id="m-gradient" x1="0%" y1="0%" x2="100%" y2="100%">

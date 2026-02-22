@@ -4,7 +4,7 @@ import Menu from "@/components/home/Menu";
 import ProgressBar from "@/components/home/ProgressBar";
 
 import Projects from "@/components/home/Projects";
-import HueDesktop from "@/components/HueDesktop";
+import HueDesktop from "@/components/Hue";
 import MouseGlow from "@/components/MouseHue";
 
 import useIsDesktop from "@/hooks/useIsDisktop";
