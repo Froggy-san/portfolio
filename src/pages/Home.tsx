@@ -90,7 +90,7 @@ const Home = () => {
       <div className="sticky top-0 left-0 lg:h-screen overflow-hidden">
         <motion.div
           ref={containerRef}
-          style={{ x: isDesktop ? x : 0 }}
+          // style={{ x: isDesktop ? x : 0 }}
           className="flex  flex-col  lg:flex-row will-change-transform"
         >
           <MainPage />
