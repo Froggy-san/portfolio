@@ -5,7 +5,7 @@ import ProgressBar from "@/components/home/ProgressBar";
 
 import Projects from "@/components/home/Projects";
 // import HueDesktop from "@/components/HueDesktop";
-import MouseGlow from "@/components/MouseHue";
+// import MouseGlow from "@/components/MouseHue";
 
 import useIsDesktop from "@/hooks/useIsDisktop";
 
@@ -98,7 +98,7 @@ const Home = () => {
           <AboutSection ref={aboutRef} />
         </motion.div>
       </div>
-      <MouseGlow />
+      {/* <MouseGlow /> */}
     </div>
   );
 };
