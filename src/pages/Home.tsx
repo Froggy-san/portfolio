@@ -4,8 +4,8 @@ import Menu from "@/components/home/Menu";
 import ProgressBar from "@/components/home/ProgressBar";
 
 import Projects from "@/components/home/Projects";
-// import HueDesktop from "@/components/HueDesktop";
-// import MouseGlow from "@/components/MouseHue";
+import HueDesktop from "@/components/HueDesktop";
+import MouseGlow from "@/components/MouseHue";
 
 import useIsDesktop from "@/hooks/useIsDisktop";
 
@@ -85,7 +85,7 @@ const Home = () => {
         scrollYProgress={scrollYProgress}
         className=" hidden lg:flex"
       />
-      {/* <HueDesktop scrollYProgress={scrollYProgress} /> */}
+      <HueDesktop scrollYProgress={scrollYProgress} />
 
       <div className="sticky top-0 left-0 lg:h-screen overflow-hidden">
         <motion.div
@@ -98,7 +98,7 @@ const Home = () => {
           <AboutSection ref={aboutRef} />
         </motion.div>
       </div>
-      {/* <MouseGlow /> */}
+      <MouseGlow />
     </div>
   );
 };
