@@ -133,6 +133,7 @@
   }
   body {
     color: var(--foreground);
+    background-color: #202020;
     line-height: 1.5;
     text-rendering: optimizeLegibility;
   }
