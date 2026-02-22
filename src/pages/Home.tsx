@@ -9,7 +9,7 @@ import MouseGlow from "@/components/MouseHue";
 
 import useIsDesktop from "@/hooks/useIsDisktop";
 
-import Lenis from "@studio-freight/lenis";
+// import Lenis from "@studio-freight/lenis";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
