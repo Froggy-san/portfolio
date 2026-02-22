@@ -7,10 +7,10 @@ import Projects from "@/components/home/Projects";
 import HueDesktop from "@/components/HueDesktop";
 import MouseGlow from "@/components/MouseHue";
 
-import useIsDesktop from "@/hooks/useIsDisktop";
+// import useIsDesktop from "@/hooks/useIsDisktop";
 
 // import Lenis from "@studio-freight/lenis";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 const Home = () => {
@@ -19,9 +19,9 @@ const Home = () => {
   const [scrollRange, setScrollRange] = useState(0);
   const projectsRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
-
+  console.log(scrollRange);
   // Then in your transform:
-  const isDesktop = useIsDesktop();
+  // const isDesktop = useIsDesktop();
   // useEffect(() => {
   //   const lenis = new Lenis({
   //     duration: 1.2, // How long the "drift" lasts
@@ -63,7 +63,7 @@ const Home = () => {
   });
 
   // Now x moves exactly the distance needed to show the last pixel of Section 2
-  const x = useTransform(scrollYProgress, [0, 1], [0, -scrollRange]);
+  // const x = useTransform(scrollYProgress, [0, 1], [0, -scrollRange]);
 
   // 1. Position: Moving from -450/-120 to the new coordinates
   // const x2 = useTransform(scrollYProgress, [0, 0.2], ["-450px", "-600px"]);
