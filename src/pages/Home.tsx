@@ -22,26 +22,26 @@ const Home = () => {
 
   // Then in your transform:
   const isDesktop = useIsDesktop();
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2, // How long the "drift" lasts
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // High-end easing
-      smoothWheel: true,
-    });
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 1.2, // How long the "drift" lasts
+  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // High-end easing
+  //     smoothWheel: true,
+  //   });
 
-    // Make the lensis function golobally available.
+  //   // Make the lensis function golobally available.
 
-    (window as any).lenis = lenis;
+  //   (window as any).lenis = lenis;
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+  //   function raf(time: number) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
 
-    requestAnimationFrame(raf);
+  //   requestAnimationFrame(raf);
 
-    return () => lenis.destroy(); // Cleanup
-  }, []);
+  //   return () => lenis.destroy(); // Cleanup
+  // }, []);
 
   // 2. Handle Responsive Math
   useEffect(() => {
