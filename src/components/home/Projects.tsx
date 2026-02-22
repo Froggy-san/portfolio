@@ -30,7 +30,7 @@ const Projects = React.forwardRef<HTMLDivElement>((_, ref) => {
                   key={i}
                   title="Auto-zone"
                   link=""
-                  image="/public/z.png"
+                  image="./public/z.png"
                 />
               ))}
           </ul>

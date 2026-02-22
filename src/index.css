@@ -203,7 +203,7 @@
     content: "";
     box-sizing: border-box;
     position: fixed;
-    background-image: url("./nose.a6f8b498.png");
+    background-image: url("./public/nose.a6f8b498.png");
     animation: noiseAnimation 0.55s steps(1) infinite;
     left: 0;
     top: 0;
