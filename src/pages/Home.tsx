@@ -7,10 +7,10 @@ import Projects from "@/components/home/Projects";
 import HueDesktop from "@/components/HueDesktop";
 import MouseGlow from "@/components/MouseHue";
 
-// import useIsDesktop from "@/hooks/useIsDisktop";
+import useIsDesktop from "@/hooks/useIsDisktop";
 
-// import Lenis from "@studio-freight/lenis";
-import { motion, useScroll } from "motion/react";
+import Lenis from "@studio-freight/lenis";
+import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 const Home = () => {
@@ -19,29 +19,29 @@ const Home = () => {
   const [scrollRange, setScrollRange] = useState(0);
   const projectsRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
-  console.log(scrollRange);
+
   // Then in your transform:
-  // const isDesktop = useIsDesktop();
-  // useEffect(() => {
-  //   const lenis = new Lenis({
-  //     duration: 1.2, // How long the "drift" lasts
-  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // High-end easing
-  //     smoothWheel: true,
-  //   });
+  const isDesktop = useIsDesktop();
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2, // How long the "drift" lasts
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // High-end easing
+      smoothWheel: true,
+    });
 
-  //   // Make the lensis function golobally available.
+    // Make the lensis function golobally available.
 
-  //   (window as any).lenis = lenis;
+    (window as any).lenis = lenis;
 
-  //   function raf(time: number) {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   }
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
 
-  //   requestAnimationFrame(raf);
+    requestAnimationFrame(raf);
 
-  //   return () => lenis.destroy(); // Cleanup
-  // }, []);
+    return () => lenis.destroy(); // Cleanup
+  }, []);
 
   // 2. Handle Responsive Math
   useEffect(() => {
@@ -63,7 +63,7 @@ const Home = () => {
   });
 
   // Now x moves exactly the distance needed to show the last pixel of Section 2
-  // const x = useTransform(scrollYProgress, [0, 1], [0, -scrollRange]);
+  const x = useTransform(scrollYProgress, [0, 1], [0, -scrollRange]);
 
   // 1. Position: Moving from -450/-120 to the new coordinates
   // const x2 = useTransform(scrollYProgress, [0, 0.2], ["-450px", "-600px"]);
@@ -85,12 +85,12 @@ const Home = () => {
         scrollYProgress={scrollYProgress}
         className=" hidden lg:flex"
       />
-      <HueDesktop scrollYProgress={scrollYProgress} />
+      {/* <HueDesktop scrollYProgress={scrollYProgress} /> */}
 
       <div className="sticky top-0 left-0 lg:h-screen overflow-hidden">
         <motion.div
           ref={containerRef}
-          // style={{ x: isDesktop ? x : 0 }}
+          style={{ x: isDesktop ? x : 0 }}
           className="flex  flex-col  lg:flex-row will-change-transform"
         >
           <MainPage />
