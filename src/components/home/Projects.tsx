@@ -26,12 +26,7 @@ const Projects = React.forwardRef<HTMLDivElement>((_, ref) => {
             {Array(5)
               .fill(0)
               .map((_, i) => (
-                <ProjectCard
-                  key={i}
-                  title="Auto-zone"
-                  link=""
-                  image="./public/z.png"
-                />
+                <ProjectCard key={i} title="Auto-zone" link="" image="/z.png" />
               ))}
           </ul>
         </div>
